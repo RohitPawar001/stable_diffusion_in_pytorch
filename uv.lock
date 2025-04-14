@@ -1,0 +1,20 @@
+version = 1
+revision = 1
+requires-python = ">=3.8"
+
+[[package]]
+name = "pytorch"
+version = "1.0.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ee/67/f403d4ae6e9cd74b546ee88cccdb29b8415a9c1b3d80aebeb20c9ea91d96/pytorch-1.0.2.tar.gz", hash = "sha256:a6915d372c085a02eceebf59d16cbcc18a2693ac3487a53e3cc8be31fee65079", size = 689 }
+
+[[package]]
+name = "stable-diffusion-in-pytorch"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "pytorch" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pytorch" }]
